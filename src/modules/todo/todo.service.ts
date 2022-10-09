@@ -19,7 +19,9 @@ export class TodoService {
       title: dto.title,
       description: dto.description,
       completed: dto.completed,
-      dateCompleted: new Date(dto.dateCompleted ?? undefined),
+      dateCompleted: dto.dateCompleted
+        ? new Date(dto.dateCompleted)
+        : undefined,
       priority: dto.priority,
     };
     const savedTodo = await this.todoRepository.save(newTodo);
@@ -37,7 +39,9 @@ export class TodoService {
       title: dto.title,
       description: dto.description,
       completed: dto.completed,
-      dateCompleted: new Date(dto.dateCompleted ?? undefined),
+      dateCompleted: dto.dateCompleted
+        ? new Date(dto.dateCompleted)
+        : undefined,
       priority: dto.priority,
     };
     const savedTodo = await this.todoRepository.save(newTodo);
