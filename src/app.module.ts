@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import * as dotenv from 'dotenv';
+import { TodoModule } from './modules/todo/todo.module';
 dotenv.config();
 
 @Module({
@@ -18,6 +19,7 @@ dotenv.config();
       },
       autoLoadEntities: true,
     }),
+    TodoModule,
   ],
 })
 export class AppModule {}
