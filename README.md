@@ -4,12 +4,12 @@
 
 1. Clone the repository.
 2. Install the packages
-```npm install```
+`npm install`
 3. Copy the .env.example and rename it .env and fill the database details.
-4. Run the migrations
-```npm run migration:run```
-5. Run the project
-```npm run start```
+4. Run the project `npm run start:dev`
+5. Run the migrations
+`npm run migration:run`
+6. Run the seeders `npm run seed:run`
 
 **Routes**
 
