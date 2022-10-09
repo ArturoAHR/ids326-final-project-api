@@ -13,4 +13,9 @@
 
 **Routes**
 
-Currently none.
+* Todo
+  * `GET /todo` - Get All Todo records.
+  * `GET /todo/:id` - Get a Todo by ID.
+  * `POST /todo` - Create a Todo record.
+  * `PATCH /todo/:id` - Update a Todo record.
+  * `DELETE /todo` - Delete a Todo record.
