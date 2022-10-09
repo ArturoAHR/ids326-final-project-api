@@ -33,7 +33,9 @@ export class todoEntity1665351433754 implements MigrationInterface {
           },
           {
             name: 'priority',
-            type: 'varchar',
+            type: 'enum',
+            enum: ['high', 'medium', 'low'],
+            enumName: 'priorityEnum',
             isNullable: false,
           },
           ...metaDataColumns,
