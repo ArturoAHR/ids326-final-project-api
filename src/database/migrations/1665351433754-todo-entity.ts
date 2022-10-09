@@ -13,30 +13,26 @@ export class todoEntity1665351433754 implements MigrationInterface {
           {
             name: 'title',
             type: 'varchar',
-            isNullable: false,
           },
           {
             name: 'description',
             type: 'varchar',
-            isNullable: true,
           },
           {
             name: 'completed',
             type: 'boolean',
-            isNullable: false,
             default: false,
           },
           {
             name: 'date_completed',
             type: 'timestamp',
-            isNullable: false,
+            isNullable: true,
           },
           {
             name: 'priority',
             type: 'enum',
             enum: ['high', 'medium', 'low'],
             enumName: 'priorityEnum',
-            isNullable: false,
           },
           ...metaDataColumns,
         ],

@@ -14,7 +14,3 @@
 **Routes**
 
 Currently none.
-
-**Developer Note**
-
-Feel free to use this empty project as a base for your own ones, but consider that I won't be giving support for any issue that you might encounter since it's for my own personal use mainly.
