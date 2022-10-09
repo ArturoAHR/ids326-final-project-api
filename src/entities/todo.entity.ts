@@ -1,7 +1,7 @@
 import { Column, Entity } from 'typeorm';
 import { BaseEntity } from './base.entity';
 
-enum TodoPriority {
+export enum TodoPriority {
   High = 'high',
   Medium = 'medium',
   Low = 'low',
