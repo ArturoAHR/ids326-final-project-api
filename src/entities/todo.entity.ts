@@ -21,6 +21,11 @@ export class Todo extends BaseEntity {
   @Column({ name: 'date_completed', type: 'timestamp' })
   dateCompleted: Date;
 
-  @Column({ name: 'priority', type: 'enum' })
+  @Column({
+    name: 'priority',
+    type: 'enum',
+    enumName: 'priorityEnum',
+    enum: TodoPriority,
+  })
   priority: TodoPriority;
 }
