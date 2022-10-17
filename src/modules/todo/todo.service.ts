@@ -1,3 +1,4 @@
+import { OperationResponseDTO } from './../../dto/operation-response.dto';
 import { Injectable } from '@nestjs/common';
 import { DeleteResult } from 'typeorm';
 import { CreateTodoRequestDTO } from '../../dto/todo/create-todo-request.dto';
@@ -48,8 +49,8 @@ export class TodoService {
     return savedTodo;
   };
 
-  delete = async (id: string): Promise<boolean> => {
+  delete = async (id: string): Promise<OperationResponseDTO> => {
     const deleteResult: DeleteResult = await this.todoRepository.delete(id);
-    return deleteResult?.affected && deleteResult.affected > 0;
+    return { success: deleteResult?.affected && deleteResult.affected > 0 };
   };
 }

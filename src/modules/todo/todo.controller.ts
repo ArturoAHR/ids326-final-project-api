@@ -1,3 +1,4 @@
+import { OperationResponseDTO } from './../../dto/operation-response.dto';
 import {
   Body,
   Controller,
@@ -40,7 +41,7 @@ export class TodoController {
   }
 
   @Delete(':id')
-  async delete(@Param('id') id: string): Promise<boolean> {
+  async delete(@Param('id') id: string): Promise<OperationResponseDTO> {
     return await this.todoService.delete(id);
   }
 }
