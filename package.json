@@ -26,7 +26,7 @@
     "migration:generate": "typeorm:cli migration:generate -n",
     "migration:run": "typeorm migration:run",
     "migration:revert": "typeorm migration:revert",
-    "seed:run": "ts-node ./node_modules/typeorm-seeding/dist/cli seed",
+    "seed:run": "ts-node ./node_modules/typeorm-seeding/dist/cli seed --configName ormconfig.ts --root ./src/config/",
     "seed:config": "ts-node ./node_modules/typeorm-seeding/dist/cli.js config --configName ormconfig.ts --root ./src/config/"
   },
   "dependencies": {

@@ -1,4 +1,5 @@
 import * as dotenv from 'dotenv';
+import { join } from 'path';
 
 dotenv.config();
 
@@ -11,14 +12,15 @@ const config = {
   username: process.env.TYPEORM_USERNAME,
   password: process.env.TYPEORM_PASSWORD,
   database: process.env.TYPEORM_DATABASE,
-  entities: [process.env.TYPEORM_ENTITIES],
+  entities: [join(__dirname, '/../entities/*.entity.{ts,js}')],
   cli: {
-    migrationsDir: process.env.TYPEORM_MIGRATIONS,
+    migrationsDir: join(__dirname, '/../database/migrations'),
   },
-  seeds: [process.env.TYPEORM_SEEDING_SEEDS],
-  factories: [process.env.TYPEORM_SEEDING_FACTORIES],
+  migrations: [join(__dirname, '/../database/migrations/*.{ts,js}')],
+  seeds: [join(__dirname, '/../database/seeders/**/*{.ts,.js}')],
+  factories: [join(__dirname, '/../database/factories/**/*{.ts,.js}')],
 };
 
 console.log(process.env.TYPEORM_SEEDING_SEEDS);
 
-export = config;
+module.exports = config;
